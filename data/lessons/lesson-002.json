@@ -1,0 +1,354 @@
+{
+  "schema_version": 0.1,
+  "id": "lesson-002",
+  "title": {
+    "am": "የአርቴፊሻል ኢንተለጀንስ መግቢያ",
+    "en": "Introduction to Artificial Intelligence"
+  },
+  "default_lang": "en",
+  "langs": [
+    "am",
+    "en"
+  ],
+  "review": {
+    "status": "approved",
+    "reviewer": "Estifanos Betre",
+    "reviewed_at": "2026-11-15T21:05:00Z",
+    "note": "AI draft reviewed and approved with Amharic translations."
+  },
+  "media": {
+    "duration_ms": 89941,
+    "renditions": [
+      {
+        "id": "video-720",
+        "kind": "video",
+        "src": "media/lesson-002-720p.mp4",
+        "mime": "video/mp4",
+        "bytes": 33746320,
+        "review": {
+          "status": "approved",
+          "reviewer": "Estifanos Betre",
+          "reviewed_at": "2026-11-15T21:05:00Z",
+          "note": "1080p source video"
+        }
+      },
+      {
+        "id": "audio-64k-opus",
+        "kind": "audio",
+        "src": "media/lesson-002-64k.opus",
+        "mime": "audio/opus",
+        "bytes": 770000,
+        "review": {
+          "status": "approved",
+          "reviewer": "Estifanos Betre",
+          "reviewed_at": "2026-11-15T21:05:00Z",
+          "note": "64k opus stream"
+        }
+      },
+      {
+        "id": "audio-64k-m4a",
+        "kind": "audio",
+        "src": "media/lesson-002-64k.m4a",
+        "mime": "audio/mp4",
+        "bytes": 736000,
+        "review": {
+          "status": "approved",
+          "reviewer": "Estifanos Betre",
+          "reviewed_at": "2026-11-15T21:05:00Z",
+          "note": "64k aac m4a stream"
+        }
+      }
+    ]
+  },
+  "segments": [
+    {
+      "id": "seg-001",
+      "start_ms": 200,
+      "end_ms": 3900,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "አርቴፊሻል ኢንተለጀንስ (AI) የዘመናችን እጅግ ለዋጭ ቴክኖሎጂ ነው።",
+        "en": "AI is the most transformative technology of our times."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.758,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-002",
+      "start_ms": 4300,
+      "end_ms": 10000,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "ከትክክለኛ ግብርና እስከ ትክክለኛ ሕክምና፣ ከግል ኢ-ኮሜርስ እስከ ግላዊ ትምህርት።",
+        "en": "From precision agriculture to precision medicine, from personalized e-commerce to personalized education."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.766,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-003",
+      "start_ms": 10300,
+      "end_ms": 18100,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "ከተገናኙ መኪኖች እስከ የተገናኙ ቤቶች፣ በዕለት ተዕለት ሕይወትዎ ውስጥ የAI አተገባበርን እያጋጠመዎት ሊሆን ይችላል።",
+        "en": "And from connected cars to connected homes, it's likely you're already experiencing many of the everyday applications of AI in your life."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.779,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-004",
+      "start_ms": 19200,
+      "end_ms": 23900,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "በዚህ የቪዲዮ ተከታታይ ውስጥ AI እንዴት እንደሚሠራ እና ለምን አስፈላጊ እንደሆነ ይማራሉ።",
+        "en": "In this video series, you'll learn how AI works and why it matters."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.838,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-005",
+      "start_ms": 24100,
+      "end_ms": 31300,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "በAI በመጠቀም ኮምፒውተሮችን በማንኛውም ነገር ላይ ለማሰልጠን መረጃን እንዴት መጠቀም እንደምንችል ያያሉ።",
+        "en": "You'll see how with AI we can use data to train computers on just about anything."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.812,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-006",
+      "start_ms": 31700,
+      "end_ms": 39700,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "ለመማር የነርቭ ኔትወርኮችን ለመምሰል AI እንዴት እንደምንጠቀም እና ኮምፒውተሮች ቁሳቁሶችን እንዲያውቁ እንዴት እንደሚያስችል ይመረምራሉ።",
+        "en": "You'll explore how we can use AI to simulate neural networks in order to learn and how AEI enables computers to recognize objects too."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.788,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-007",
+      "start_ms": 40200,
+      "end_ms": 47200,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "እና ከሁሉም በላይ ስለ AI ሰፊ ማህበራዊ ተፅእኖዎች እና ካልታሰቡ ውጤቶች እንዴት መጠንቀቅ እንደሚቻል ይማራሉ።",
+        "en": "And importantly, you learn about the broad societal impacts of AI and how to guard against unintended consequences."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.787,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-008",
+      "start_ms": 47600,
+      "end_ms": 55400,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "የህብረተሰቡን ችግሮች ለመፍታት በሚጠቀሙበት ለውጥ አምጪዎች እጅ AI ምን ሊያደርግ እንደሚችል ማየት የሚያበረታታ ነው።",
+        "en": "It's inspiring to see what AI can do in the hands of change makers who harness it to address societies."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.827,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-009",
+      "start_ms": 55700,
+      "end_ms": 60700,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "አስቸኳይ ፈተናዎች። በተመሳሳይ ጊዜ AIን በሃላፊነት መገንባታችንን ማረጋገጥ አለብን።",
+        "en": "most pressing challenges. At the same time, we must ensure we build AI responsibly."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.818,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-010",
+      "start_ms": 60900,
+      "end_ms": 66800,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "መርሃዊ አካሄድን መከተል እና ኮምፒውተሮች ምን ማድረግ ይችላሉ ብቻ ሳይሆን ከባድ ጥያቄዎችን መጠየቅ።",
+        "en": "taking a principled approach and asking the difficult questions like not what computers can do."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.75,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-011",
+      "start_ms": 67000,
+      "end_ms": 73500,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "ነገር ግን ኮምፒውተሮች ምን ማድረግ አለባቸው። እያንዳንዳችሁ በAI ምን እንደምታልሙ እና እንደምትፈጥሩ ለማየት ጓጉቻለሁ።",
+        "en": "but what computers should do. I'm excited to see what each of you will dream and invent with AI."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.766,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-012",
+      "start_ms": 73600,
+      "end_ms": 78800,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "እና ሁላችንም ልንኖርበት የምንፈልገውን ዓለም ለመገንባት ይህንን ኃይለኛ ቴክኖሎጂ እንዴት እንደምትተገብሩት።",
+        "en": "and how you will apply this powerful technology to build the world that we all want to live in."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.801,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    },
+    {
+      "id": "seg-013",
+      "start_ms": 79100,
+      "end_ms": 81800,
+      "speaker": null,
+      "lang": "en",
+      "text": {
+        "am": "በትምህርቱ እንደተደሰቱ ተስፋ አደርጋለሁ፣ ሁላችሁንም በጣም አመሰግናለሁ。",
+        "en": "I hope you enjoyed this course, thank you all very much."
+      },
+      "sound_tags": [],
+      "source": "pipeline:faster-whisper:intro.mp4",
+      "confidence": 0.723,
+      "review": {
+        "status": "approved",
+        "reviewer": "Estifanos Betre",
+        "reviewed_at": "2026-11-15T21:05:00Z",
+        "note": "Approved human review"
+      }
+    }
+  ],
+  "descriptions": [],
+  "images": [],
+  "sign": {
+    "src": "media/lesson-002-sign.mp4",
+    "language": "ase-ET",
+    "offset_ms": 0,
+    "credit": {
+      "interpreter": "Ethiopian Sign Language Interpreter",
+      "organisation": "Ethiopian National Association of the Deaf (ENAD)"
+    },
+    "consent_id": null,
+    "review": {
+      "status": "approved",
+      "reviewer": "Estifanos Betre",
+      "reviewed_at": "2026-11-15T21:05:00Z",
+      "note": "Synchronized Ethiopian Sign Language (ase-ET) interpreter track."
+    }
+  },
+  "glossary": [],
+  "chapters": [],
+  "check_questions": [],
+  "status_values": [
+    "draft",
+    "machine_drafted",
+    "in_review",
+    "changes_requested",
+    "approved",
+    "rejected"
+  ]
+}

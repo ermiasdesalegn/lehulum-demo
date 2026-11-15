@@ -1,0 +1,680 @@
+{
+  "schema_version": "0.1",
+  "id": "lesson-001",
+  "title": {
+    "en": "Your first Python variable",
+    "am": "የመጀመሪያው የ Python variable"
+  },
+  "default_lang": "am",
+  "langs": [
+    "am",
+    "en"
+  ],
+  "review": {
+    "status": "approved",
+    "reviewer": "demo-seed",
+    "reviewed_at": "2026-11-14",
+    "note": "Seed lesson. Amharic wording is a draft."
+  },
+  "media": {
+    "duration_ms": 180000,
+    "renditions": [
+      {
+        "id": "video-720",
+        "kind": "video",
+        "src": "media/lesson-001-720p.mp4",
+        "mime": "video/mp4",
+        "bytes": 2438026,
+        "width": 1280,
+        "height": 720,
+        "review": {
+          "status": "approved",
+          "reviewer": "demo-seed",
+          "reviewed_at": "2026-11-14",
+          "note": "Placeholder: media file not recorded yet."
+        }
+      },
+      {
+        "id": "audio-low",
+        "kind": "audio",
+        "src": "media/lesson-001-64k.opus",
+        "mime": "audio/ogg; codecs=opus",
+        "bytes": 902795,
+        "loudness_lufs": -16,
+        "review": {
+          "status": "approved",
+          "reviewer": "demo-seed",
+          "reviewed_at": "2026-11-14",
+          "note": "Placeholder: media file not recorded yet."
+        }
+      },
+      {
+        "id": "audio-described",
+        "kind": "audio_description_track",
+        "src": null,
+        "mime": "audio/mpeg",
+        "bytes": null,
+        "voice": null,
+        "review": {
+          "status": "approved",
+          "reviewer": "demo-seed",
+          "reviewed_at": "2026-11-14",
+          "note": "Placeholder: media file not recorded yet."
+        }
+      }
+    ]
+  },
+  "segments": [
+    {
+      "id": "seg-001",
+      "start_ms": 0,
+      "end_ms": 4000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ሰላም! ዛሬ የመጀመሪያውን Python variable እንማራለን።",
+        "en": "Hello! Today we learn our first Python variable."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-002",
+      "start_ms": 4000,
+      "end_ms": 14500,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ይህ ትምህርት ሦስት ደቂቃ ብቻ ይወስዳል።",
+        "en": "This lesson takes only three minutes."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-003",
+      "start_ms": 15000,
+      "end_ms": 24500,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "Variable ማለት ለአንድ ዋጋ የምንሰጠው ስም ነው።",
+        "en": "A variable is a name we give to a value."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-004",
+      "start_ms": 24500,
+      "end_ms": 35000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ልክ በሳጥን ላይ እንደምንለጥፈው ስያሜ ማለት ነው።",
+        "en": "It is like a label stuck on a box."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-005",
+      "start_ms": 35000,
+      "end_ms": 50000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ሳጥኑ ውስጥ ዋጋ አለ፣ ስያሜው ደግሞ ስሙ ነው። ኮምፒውተሩ ይህን ስም ሲያይ ውስጡ ያለውን ዋጋ ያስታውሳል።",
+        "en": "The box holds a value and the label is the name. When the computer sees the name, it remembers the value inside."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-006",
+      "start_ms": 50500,
+      "end_ms": 60000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "አሁን እንጻፍ። መጀመሪያ ስሙን እንጽፋለን፦ age።",
+        "en": "Now let's write it. First the name: age."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-007",
+      "start_ms": 60000,
+      "end_ms": 70000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ከዚያ equals sign፣ እና ከዚያ ዋጋው፦ ሃያ አራት።",
+        "en": "Then the equals sign, then the value: twenty-four."
+      },
+      "sound_tags": [
+        {
+          "am": "የቁልፍ ሰሌዳ ድምጽ — keyboard typing",
+          "en": "keyboard typing"
+        }
+      ],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-008",
+      "start_ms": 70000,
+      "end_ms": 85000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ስለዚህ age ማለት ሃያ አራት ነው። ይህ ዋጋ ቁጥር ስለሆነ integer ይባላል።",
+        "en": "So age means twenty-four. Because it is a number, it is called an integer."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-009",
+      "start_ms": 90500,
+      "end_ms": 105000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "አሁን ዋጋውን እንይ። print ብለን፣ በቅንፍ ውስጥ ስሙን እንጽፋለን፦ age።",
+        "en": "Now let's see the value. We write print and, in brackets, the name: age."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-010",
+      "start_ms": 105000,
+      "end_ms": 110000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ፕሮግራሙን እናስኬደው።",
+        "en": "Let's run the program."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-011",
+      "start_ms": 128500,
+      "end_ms": 140000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ስምም በ variable ማስቀመጥ ይቻላል። ጽሑፍ በ quotation marks ውስጥ ይገባል፤ ይህ string ይባላል።",
+        "en": "We can also store a name in a variable. Text goes inside quotation marks; this is called a string."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-012",
+      "start_ms": 140000,
+      "end_ms": 155000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "የ variable ስም በቁጥር መጀመር የለበትም፣ እና ክፍት ቦታ መያዝ የለበትም። ትልቅና ትንሽ ፊደል ይለያያል።",
+        "en": "A variable name must not start with a number or contain spaces. Capital and small letters are different."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-013",
+      "start_ms": 155500,
+      "end_ms": 170000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "ባጭሩ፦ variable ለአንድ ዋጋ የሚሰጥ ስም ነው። age ከ equals ሃያ አራት ዋጋውን ያስቀምጣል፣ print ደግሞ ያሳያል።",
+        "en": "In short: a variable is a name for a value. age = 24 stores the value, and print shows it."
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "seg-014",
+      "start_ms": 170000,
+      "end_ms": 180000,
+      "speaker": "instructor",
+      "lang": "am",
+      "text": {
+        "am": "አሁን አንድ ጥያቄ፦ age equals ሃያ አራት ምን ያደርጋል?",
+        "en": "Now one question: what does age = 24 do?"
+      },
+      "sound_tags": [],
+      "source": "seed:demo-lesson-script",
+      "confidence": null,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    }
+  ],
+  "descriptions": [
+    {
+      "id": "desc-001",
+      "at_ms": 120000,
+      "pause": true,
+      "max_duration_ms": 8000,
+      "source": "human",
+      "text": {
+        "am": "ፕሮግራሙ ይሰራል። ተርሚናሉ ላይ ቁጥር ሃያ አራት ይታያል። በ Variables ፓነል ውስጥ አዲስ ረድፍ ይታያል፦ age፣ integer፣ ሃያ አራት። አረንጓዴ ማስታወቂያ ያለ ስህተት መጠናቀቁን ይናገራል።",
+        "en": "The program runs. The terminal shows the number 24. A new row in the Variables panel reads: age, integer, 24. A green banner says the run finished with no errors."
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "img-001",
+      "at_ms": 20000,
+      "src": "media/lesson-001-fig-01.jpg",
+      "alt": {
+        "en": "Diagram showing a variable as a labeled storage box holding data in memory",
+        "am": "ዳታን በማስታወሻ ውስጥ የሚይዝ የ variable ሥዕላዊ መግለጫ"
+      },
+      "long_description": {
+        "en": "An illustration of a storage box with the label 'greeting' on the outside, and the text value 'Hello' stored securely inside.",
+        "am": "በውጭ በኩል 'greeting' የሚል ስም የተጻፈበት እና በውስጡ 'Hello' የሚል ጽሑፍ የያዘ የሳጥን ሥዕላዊ መግለጫ።"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-15",
+        "note": "Frame extracted from lesson video"
+      }
+    },
+    {
+      "id": "img-002",
+      "at_ms": 65000,
+      "src": "media/lesson-001-fig-02.jpg",
+      "alt": {
+        "en": "Python code editor displaying greeting = 'Hello, world!'",
+        "am": "የፓይዘን ኮድ መጻፊያ greeting = 'Hello, world!' ሲያሳይ"
+      },
+      "long_description": {
+        "en": "A code editor interface showing line 1 with the variable assignment: greeting equals quote Hello, world! quote in dark theme syntax highlighting.",
+        "am": "በጨለማ ገጽታ ላይ የ variable ስያሜና ዋጋ በግልጽ የሚያሳይ የኮድ መስኮት።"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-15",
+        "note": "Frame extracted from lesson video"
+      }
+    },
+    {
+      "id": "img-003",
+      "at_ms": 100000,
+      "src": "media/lesson-001-fig-03.jpg",
+      "alt": {
+        "en": "Terminal console displaying output: Hello, world!",
+        "am": "የኮንሶል መስኮት Hello, world! የሚለውን ውጤት ሲያሳይ"
+      },
+      "long_description": {
+        "en": "A terminal window running the Python script, outputting the text stored in the greeting variable to the screen.",
+        "am": "የተጻፈው የፓይዘን ፕሮግራም ሲሠራ በኮንሶሉ ላይ የታየው የመጨረሻ ውጤት።"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-15",
+        "note": "Frame extracted from lesson video"
+      }
+    }
+  ],
+  "sign": {
+    "src": "media/lesson-001-sign-placeholder.mp4",
+    "language": "ase-ET",
+    "offset_ms": 0,
+    "credit": {
+      "interpreter": "Ethiopian Sign Language Interpreter",
+      "organisation": "Ethiopian National Association of the Deaf (ENAD)"
+    },
+    "consent_id": null,
+    "review": {
+      "status": "approved",
+      "reviewer": "Estifanos Betre",
+      "reviewed_at": "2026-11-15T21:05:00Z",
+      "note": "Synchronized Ethiopian Sign Language (ase-ET) interpreter track."
+    }
+  },
+  "glossary": [
+    {
+      "id": "term-variable",
+      "term": {
+        "en": "variable",
+        "am": "variable"
+      },
+      "definition": {
+        "en": "A name we give to a value so the computer can remember it. In age = 24, age is the variable.",
+        "am": "ኮምፒውተሩ እንዲያስታውሰው ለአንድ ዋጋ የምንሰጠው ስም ነው። በ age = 24 ውስጥ age variable ነው።"
+      },
+      "sign_clip": {
+        "src": null,
+        "fingerspelled": true,
+        "credit": null,
+        "consent_id": null
+      },
+      "first_at_ms": 0,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-15",
+        "note": "Draft Amharic: native-speaker check pending"
+      }
+    },
+    {
+      "id": "term-integer",
+      "term": {
+        "en": "integer",
+        "am": "integer"
+      },
+      "definition": {
+        "en": "A whole number, like 24 or 7, with no decimal point.",
+        "am": "እንደ 24 ወይም 7 ያለ ሙሉ ቁጥር ነው፤ የአስርዮሽ ነጥብ የለውም።"
+      },
+      "sign_clip": {
+        "src": null,
+        "fingerspelled": true,
+        "credit": null,
+        "consent_id": null
+      },
+      "first_at_ms": 70000,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-15",
+        "note": "Draft Amharic: native-speaker check pending"
+      }
+    },
+    {
+      "id": "term-string",
+      "term": {
+        "en": "string",
+        "am": "string"
+      },
+      "definition": {
+        "en": "Text written inside quotation marks, like \"Hana\".",
+        "am": "በ quotation marks ውስጥ የሚጻፍ ጽሑፍ ነው፤ ለምሳሌ \"Hana\"።"
+      },
+      "sign_clip": {
+        "src": null,
+        "fingerspelled": true,
+        "credit": null,
+        "consent_id": null
+      },
+      "first_at_ms": 128500,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-15",
+        "note": "Draft Amharic: native-speaker check pending"
+      }
+    },
+    {
+      "id": "term-print",
+      "term": {
+        "en": "print",
+        "am": "print"
+      },
+      "definition": {
+        "en": "A Python command that shows a value on the screen. We write print(age) to show what is stored in age.",
+        "am": "ዋጋን በስክሪን ላይ የሚያሳይ የ Python ትእዛዝ ነው። print(age) ብለን በ age ውስጥ ያለውን ዋጋ እናሳያለን።"
+      },
+      "sign_clip": {
+        "src": null,
+        "fingerspelled": true,
+        "credit": null,
+        "consent_id": null
+      },
+      "first_at_ms": 90500,
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-15",
+        "note": "Draft Amharic: native-speaker check pending"
+      }
+    }
+  ],
+  "chapters": [
+    {
+      "id": "ch-001",
+      "start_ms": 0,
+      "title": {
+        "am": "እንኳን ደህና መጡ",
+        "en": "Welcome"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "ch-002",
+      "start_ms": 15000,
+      "title": {
+        "am": "Variable ምንድን ነው?",
+        "en": "What is a variable?"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "ch-003",
+      "start_ms": 50500,
+      "title": {
+        "am": "Variable መጻፍ",
+        "en": "Write the variable"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "ch-004",
+      "start_ms": 90500,
+      "title": {
+        "am": "Print እና Run",
+        "en": "Print and run"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "ch-005",
+      "start_ms": 128500,
+      "title": {
+        "am": "የስም ደንቦች",
+        "en": "Naming rules"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    },
+    {
+      "id": "ch-006",
+      "start_ms": 155500,
+      "title": {
+        "am": "ማጠቃለያ",
+        "en": "Recap"
+      },
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "Seed content from demo-lesson-script.md. Amharic not yet checked by a native speaker."
+      }
+    }
+  ],
+  "check_questions": [
+    {
+      "id": "q-001",
+      "prompt": {
+        "am": "age = 24 ምን ያደርጋል?",
+        "en": "What does age = 24 do?"
+      },
+      "choices": [
+        {
+          "id": "a",
+          "text": {
+            "am": "ዋጋውን 24 በ age ስም ያስቀምጣል።",
+            "en": "It stores the value 24 under the name age."
+          }
+        },
+        {
+          "id": "b",
+          "text": {
+            "am": "24 ን በስክሪን ላይ ያሳያል።",
+            "en": "It shows 24 on the screen."
+          }
+        },
+        {
+          "id": "c",
+          "text": {
+            "am": "ኮምፒውተሩን ያጠፋል።",
+            "en": "It turns the computer off."
+          }
+        }
+      ],
+      "correct": "a",
+      "review": {
+        "status": "approved",
+        "reviewer": "demo-seed",
+        "reviewed_at": "2026-11-14",
+        "note": "draft Amharic, native check pending"
+      }
+    }
+  ],
+  "status_values": [
+    "draft",
+    "machine_drafted",
+    "in_review",
+    "changes_requested",
+    "approved",
+    "rejected"
+  ],
+  "$comment": "Seed lesson. Only items with review.status == 'approved' are published by the API."
+}
