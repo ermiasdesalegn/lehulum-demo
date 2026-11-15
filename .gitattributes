@@ -1,0 +1,4 @@
+# the published player copy must stay byte-exact (the build compares it with a fresh build)
+lehulum.js -text
+fonts/** -text
+media/*.vtt text eol=lf

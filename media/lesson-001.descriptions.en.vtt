@@ -1,0 +1,6 @@
+WEBVTT
+Language: en
+
+desc-001
+00:02:00.000 --> 00:02:08.000
+The program runs. The terminal shows the number 24. A new row in the Variables panel reads: age, integer, 24. A green banner says the run finished with no errors.

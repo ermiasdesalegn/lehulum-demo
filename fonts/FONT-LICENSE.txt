@@ -1,0 +1,10 @@
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is available with a FAQ at: https://openfontlicense.org
+
+The font in this folder is a subset (Ethiopic blocks, Basic Latin, general punctuation; hinting removed)
+of Noto Sans Ethiopic, converted to WOFF2. The glyph outlines and names are unchanged. The font's own
+name table gives this copyright and license:
+
+Copyright: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/ethiopic)
+License: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+License URL: https://scripts.sil.org/OFL

@@ -1,0 +1,85 @@
+WEBVTT
+Language: en
+
+seg-001
+00:00:00.000 --> 00:00:04.000
+Hello! Today we learn our
+first Python variable.
+
+seg-002
+00:00:04.000 --> 00:00:14.500
+This lesson takes only three minutes.
+
+seg-003
+00:00:15.000 --> 00:00:24.500
+A variable is a name we give to a value.
+
+seg-004
+00:00:24.500 --> 00:00:35.000
+It is like a label stuck on a box.
+
+seg-005
+00:00:35.000 --> 00:00:41.000
+The box holds a value
+and the label is the name.
+
+seg-005-2
+00:00:41.000 --> 00:00:47.000
+When the computer sees the name,
+it remembers the value inside.
+
+seg-006
+00:00:50.500 --> 00:01:00.000
+Now let's write it. First the name: age.
+
+seg-007
+00:01:00.000 --> 00:01:10.000
+[keyboard typing]
+Then the equals sign,
+then the value: twenty-four.
+
+seg-008
+00:01:10.000 --> 00:01:25.000
+So age means twenty-four. Because it
+is a number, it is called an integer.
+
+seg-009
+00:01:30.500 --> 00:01:45.000
+Now let's see the value. We write print
+and, in brackets, the name: age.
+
+seg-010
+00:01:45.000 --> 00:01:50.000
+Let's run the program.
+
+seg-011
+00:02:08.500 --> 00:02:14.000
+We can also store a name in a variable.
+
+seg-011-2
+00:02:14.000 --> 00:02:20.000
+Text goes inside quotation marks;
+this is called a string.
+
+seg-012
+00:02:20.000 --> 00:02:26.000
+A variable name must not start
+with a number or contain spaces.
+
+seg-012-2
+00:02:26.000 --> 00:02:32.000
+Capital and small letters are different.
+
+seg-013
+00:02:35.500 --> 00:02:41.500
+In short: a variable
+is a name for a value.
+
+seg-013-2
+00:02:41.500 --> 00:02:47.500
+age = 24 stores the value,
+and print shows it.
+
+seg-014
+00:02:50.000 --> 00:03:00.000
+Now one question: what does age = 24 do?

@@ -1,0 +1,14 @@
+{
+  "fonts": [
+    {
+      "file": "NotoSansEthiopic-400.7e0bd968.woff2",
+      "bytes": 69448,
+      "sha256": "7e0bd968bda618354dc87b9559d7d66aa476569da8b2c0de0f465b832f53c19f"
+    },
+    {
+      "file": "NotoSansEthiopic-700.dec1cb38.woff2",
+      "bytes": 69804,
+      "sha256": "dec1cb38a98ca9d79a056bf9c73fbbe5dd3db8377d81dd06f679e6ba023667a8"
+    }
+  ]
+}

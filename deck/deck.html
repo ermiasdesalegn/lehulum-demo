@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lehulum pitch deck</title>
+<meta name="description" content="Seven slides for the Lehulum final pitch, Track 2, ALX Digital Bridge accessibility hackathon.">
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+<a class="skip" href="#slides">Skip to the slide</a>
+
+<header class="deck-header">
+  <p>Lehulum pitch deck</p>
+  <p id="counter" class="counter" role="status" aria-live="polite" aria-atomic="true">Slide 1 of 7</p>
+</header>
+
+<main id="slides" aria-label="Slides">
+
+<section class="slide is-current" aria-label="Slide 1 of 7">
+  <h1>Lehulum (ለሁሉም)</h1>
+  <ul>
+    <li>One lesson script, every way in</li>
+    <li>Track 2: accessible learning media</li>
+    <li>Ermias and Estifanos</li>
+  </ul>
+  <p class="sub" lang="am">ትምህርት ለሁሉም ሰው።</p>
+</section>
+
+<section class="slide" aria-label="Slide 2 of 7" hidden>
+  <h2>The problem</h2>
+  <p>Two learners from the game plan tried one online lesson on 21 October.</p>
+  <div class="grid">
+    <div class="card"><h3>Hana</h3><ul><li>Deaf, Ethiopian Sign Language</li><li>Adama</li></ul></div>
+    <div class="card"><h3>Dawit</h3><ul><li>Blind, TalkBack</li><li>Bahir Dar</li></ul></div>
+  </div>
+  <ul>
+    <li>No captions. No signer.</li>
+    <li>Buttons without labels.</li>
+    <li>Nothing offline.</li>
+  </ul>
+  <p class="note">Hana and Dawit are personas from the game plan, not people we met.</p>
+</section>
+
+<section class="slide" aria-label="Slide 3 of 7" hidden>
+  <h2>The idea</h2>
+  <ul>
+    <li>One lesson script</li>
+    <li>Machines draft the captions</li>
+    <li>A named person approves</li>
+    <li>Only approved text reaches a learner</li>
+  </ul>
+  <p class="sub">Next: the main task, live.</p>
+</section>
+
+<section class="slide" aria-label="Slide 4 of 7" hidden>
+  <h2>The main task, live</h2>
+  <ul>
+    <li>A Savanna page: starter files not edited</li>
+    <li>Amharic captions, then play</li>
+    <li>At two minutes the video pauses; the description goes to the screen reader</li>
+    <li>Check question, then a certificate link: Verified, no name on it</li>
+    <li>Job card: three-line summary, Ethiopian date</li>
+  </ul>
+  <p class="note">Sign window: labelled placeholder, not an interpreter.</p>
+</section>
+
+<section class="slide" aria-label="Slide 5 of 7" hidden>
+  <h2>One lesson, many outputs</h2>
+  <div class="grid">
+    <div class="card"><h3>Learner</h3><ul><li>Captions: Amharic, English</li><li>Transcript</li><li>Descriptions</li><li>Braille file</li></ul></div>
+    <div class="card"><h3>Slow phone</h3><ul><li>8 KB offline lesson</li><li>Data saver</li><li>No video until asked</li></ul></div>
+    <div class="card"><h3>Pipeline</h3><ul><li>One real 90 s video</li><li>13 drafts</li><li>1 mistake: &ldquo;A I&rdquo; heard as &ldquo;A E I&rdquo;</li></ul></div>
+  </div>
+  <p>So a person approves every line.</p>
+</section>
+
+<section class="slide" aria-label="Slide 6 of 7" hidden>
+  <h2>Adoption</h2>
+  <ul>
+    <li>One script tag, 34 KB gzipped</li>
+    <li>Or a blank page with plain files, no server</li>
+    <li>REST API and an OpenAPI file</li>
+    <li>One <code>docker compose up</code></li>
+    <li>Nothing leaves the host: no CDN, no analytics</li>
+  </ul>
+  <pre>&lt;lehulum-player lesson="lesson-001" api="..." lang="en"&gt;&lt;/lehulum-player&gt;</pre>
+</section>
+
+<section class="slide" aria-label="Slide 7 of 7" hidden>
+  <h2>Honesty and the ask</h2>
+  <ul>
+    <li>Draft: all Amharic text</li>
+    <li>Placeholder: the sign-language clip</li>
+    <li>Not built: LTI 1.3, tagged PDF, offline service worker</li>
+    <li>Not yet tested by a person with NVDA or TalkBack</li>
+    <li>We need: a real interpreter and native Amharic reviewers</li>
+  </ul>
+  <p class="sub" lang="am">አመሰግናለሁ።</p>
+  <p>Thank you. Questions.</p>
+</section>
+
+</main>
+
+<nav class="deck-nav" aria-label="Slide navigation">
+  <button type="button" id="prev">Previous slide</button>
+  <button type="button" id="next">Next slide</button>
+  <p class="hint">Keys: Right Arrow, Space or Page Down for next; Left Arrow or Page Up for previous; Home and End.</p>
+</nav>
+
+<script src="deck.js"></script>
+</body>
+</html>
