@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lehulum pitch deck</title>
-<meta name="description" content="Seven slides for the Lehulum final pitch, Track 2, ALX Digital Bridge accessibility hackathon.">
+<meta name="description" content="Nine slides for the Lehulum final pitch, Track 2, ALX Digital Bridge accessibility hackathon.">
 <link rel="stylesheet" href="deck.css">
 </head>
 <body>
@@ -12,81 +12,106 @@
 
 <header class="deck-header">
   <p>Lehulum pitch deck</p>
-  <p id="counter" class="counter" role="status" aria-live="polite" aria-atomic="true">Slide 1 of 7</p>
-  <progress id="bar" class="progress" max="7" value="1" aria-hidden="true"></progress>
+  <p id="counter" class="counter" role="status" aria-live="polite" aria-atomic="true">Slide 1 of 9</p>
+  <progress id="bar" class="progress" max="9" value="1" aria-hidden="true"></progress>
 </header>
 
 <main id="slides" aria-label="Slides">
 
-<section class="slide is-current" aria-label="Slide 1 of 7">
+<section class="slide is-current" aria-label="Slide 1 of 9">
   <h1>Lehulum (ለሁሉም)</h1>
-  <p class="lead">Accessible learning media for every learner: captions, sign language, audio description, Braille and offline lessons from one lesson script.</p>
+  <p class="lead">One lesson script becomes captions, sign language, audio description, Braille and an offline lesson, so no learner is left out.</p>
   <ul>
     <li>Track 2: accessible learning media, ALX Digital Bridge</li>
     <li>Team: Ermias Betre, Estifanos Betre &amp; Meareg</li>
-    <li>Live demo, no login needed</li>
+    <li>Plugs into ALX Savanna and any other learning platform with one script tag</li>
   </ul>
   <p class="sub" lang="am">ትምህርት ለሁሉም ሰው።</p>
 </section>
 
-<section class="slide" aria-label="Slide 2 of 7" hidden>
-  <h2>One online lesson, two learners shut out</h2>
-  <p>We followed two learners from the game plan through the same lesson.</p>
+<section class="slide" aria-label="Slide 2 of 9" hidden>
+  <h2>An online lesson that shuts people out</h2>
+  <p>We followed two learners from the game plan through one ordinary lesson. The untouched Savanna starter page shows the same gaps: a video with no captions, no signer, no description.</p>
   <div class="grid">
-    <div class="card"><h3>Hana, Adama</h3><ul><li>Deaf, uses Ethiopian Sign Language</li><li>No captions, no signer</li><li>Cannot follow the lesson</li></ul></div>
-    <div class="card"><h3>Dawit, Bahir Dar</h3><ul><li>Blind, uses TalkBack</li><li>Buttons without names</li><li>Cannot start the video</li></ul></div>
-    <div class="card"><h3>Both</h3><ul><li>Nothing works offline</li><li>Heavy video on a slow phone</li><li>No Amharic in the interface</li></ul></div>
+    <div class="card"><h3>Hana, Adama</h3><ul><li>Deaf; Ethiopian Sign Language is her first language</li><li>No captions, no signer: she cannot follow</li></ul></div>
+    <div class="card"><h3>Dawit, Bahir Dar</h3><ul><li>Blind; uses TalkBack</li><li>Buttons have no names, so he cannot even start the video</li></ul></div>
+    <div class="card"><h3>Both</h3><ul><li>Nothing works offline</li><li>Heavy video on a slow phone</li><li>Nothing in Amharic</li></ul></div>
   </div>
   <p class="note">Hana and Dawit are personas from the game plan, not people we met.</p>
 </section>
 
-<section class="slide" aria-label="Slide 3 of 7" hidden>
-  <h2>The idea: one script, every way in</h2>
-  <div class="grid steps">
-    <div class="card"><h3>1. One script</h3><ul><li>The instructor writes the lesson once</li></ul></div>
-    <div class="card"><h3>2. Machines draft</h3><ul><li>Captions, translation, audio-only version</li></ul></div>
-    <div class="card"><h3>3. A person approves</h3><ul><li>Every line has a named reviewer</li></ul></div>
-    <div class="card"><h3>4. Learners get it</h3><ul><li>Only approved text reaches a learner</li></ul></div>
+<section class="slide" aria-label="Slide 3 of 9" hidden>
+  <h2>What Track 2 asked for, and what is built</h2>
+  <div class="grid mini">
+    <div class="card"><h3>Keyboard and screen reader</h3><ul><li>Native controls, visible focus, 44 px targets</li></ul></div>
+    <div class="card"><h3>Captions</h3><ul><li>Amharic and English, resizable, recolourable</li></ul></div>
+    <div class="card"><h3>Sign language</h3><ul><li>Movable, resizable window kept in sync</li></ul></div>
+    <div class="card"><h3>Audio description</h3><ul><li>Video pauses; your own screen reader reads it</li></ul></div>
+    <div class="card"><h3>Offline and 3G</h3><ul><li>8 KB lesson file, audio-only version, data saver</li></ul></div>
+    <div class="card"><h3>Handouts</h3><ul><li>Tagged PDF, Amharic Braille file</li></ul></div>
+    <div class="card"><h3>Career gateway</h3><ul><li>Job cards with a spoken summary</li></ul></div>
+    <div class="card"><h3>Certificate</h3><ul><li>Signed link anyone can verify, no personal data</li></ul></div>
   </div>
-  <p class="sub">Why a person: our pipeline heard &ldquo;A I&rdquo; as &ldquo;A E I&rdquo;. Machines help; people decide.</p>
 </section>
 
-<section class="slide" aria-label="Slide 4 of 7" hidden>
+<section class="slide" aria-label="Slide 4 of 9" hidden>
+  <h2>The idea: one script, a person approves</h2>
+  <div class="grid steps">
+    <div class="card"><h3>1. One script</h3><ul><li>The instructor adds a lecture video once</li></ul></div>
+    <div class="card"><h3>2. Machines draft</h3><ul><li>Audio-only copy, speech to text, Amharic translation</li></ul></div>
+    <div class="card"><h3>3. A person approves</h3><ul><li>Every line has a named reviewer</li></ul></div>
+    <div class="card"><h3>4. Learners get it</h3><ul><li>Only approved text is ever shown</li></ul></div>
+  </div>
+  <p>Our real 90-second test video gave 13 caption drafts and one mistake: the machine heard &ldquo;A I&rdquo; as &ldquo;A E I&rdquo;. That is why a person approves.</p>
+</section>
+
+<section class="slide" aria-label="Slide 5 of 9" hidden>
   <h2>Try it now: live, no login</h2>
   <ul class="links">
-    <li><a href="https://ermiasdesalegn.github.io/lehulum-demo/blank.html">Lesson 1 player</a> <span>captions in Amharic and English, sign window, audio description at 2:00</span></li>
-    <li><a href="https://ermiasdesalegn.github.io/lehulum-demo/lesson-002.html">Lesson 2 player</a> <span>a real 90-second video with its sign-language track</span></li>
-    <li><a href="https://ermiasdesalegn.github.io/lehulum-demo/instructor.html">Instructor Studio</a> <span>add a lecture and a sign video, watch them stay in sync, review captions</span></li>
+    <li><a href="https://ermiasdesalegn.github.io/lehulum-demo/blank.html">Lesson 1 player</a> <span>Press Play, then Captions. At 2:00 the video pauses and the description is read out.</span></li>
+    <li><a href="https://ermiasdesalegn.github.io/lehulum-demo/lesson-002.html">Lesson 2 player</a> <span>A real 90-second video with Amharic and English captions and its sign-language window.</span></li>
+    <li><a href="https://ermiasdesalegn.github.io/lehulum-demo/instructor.html">Instructor Studio</a> <span>Add a lecture and a sign video, watch them stay in sync, review the captions line by line.</span></li>
   </ul>
-  <p class="note">Keyboard only works everywhere. At two minutes the video pauses and the description goes to the learner's own screen reader.</p>
+  <p class="note">Everything works with the keyboard alone. Nothing starts playing by itself.</p>
 </section>
 
-<section class="slide" aria-label="Slide 5 of 7" hidden>
-  <h2>One lesson, many outputs</h2>
+<section class="slide" aria-label="Slide 6 of 9" hidden>
+  <h2>Built for Ethiopia and for slow networks</h2>
   <div class="grid">
-    <div class="card"><h3>For each learner</h3><ul><li>Captions: Amharic, English</li><li>Movable sign-language window</li><li>Audio description, transcript</li><li>Tagged PDF and Braille file</li></ul></div>
-    <div class="card"><h3>For a slow phone</h3><ul><li>8 KB offline lesson</li><li>Audio-only 64 kbps version</li><li>Data saver: no video until asked</li></ul></div>
-    <div class="card"><h3>For the instructor</h3><ul><li>One real 90 s video in, 13 caption drafts out</li><li>Review table, one click to approve</li><li>Job card with spoken summary</li></ul></div>
+    <div class="card"><h3>Language</h3><ul><li>Amharic interface and captions</li><li>Ethiopic font served by us</li><li>Ethiopian dates on job cards</li></ul></div>
+    <div class="card"><h3>Low data</h3><ul><li>A 2.4 MB video becomes about 0.8 MB of audio</li><li>Captions, transcript and sign stay in sync</li><li>The whole lesson as one 8 KB file</li></ul></div>
+    <div class="card"><h3>Work and income</h3><ul><li>10 job cards, 5 English and 5 Amharic</li><li>Each has a spoken summary</li><li>Works at 200 % zoom</li></ul></div>
   </div>
 </section>
 
-<section class="slide" aria-label="Slide 6 of 7" hidden>
-  <h2>Easy to adopt, easy to trust</h2>
+<section class="slide" aria-label="Slide 7 of 9" hidden>
+  <h2>Plugs into any platform</h2>
   <div class="grid">
-    <div class="card"><h3>Adopt it</h3><ul><li>One script tag, 37 KB gzipped</li><li>Or plain files, no server</li><li>REST API and OpenAPI file</li><li>One <code>docker compose up</code></li></ul></div>
-    <div class="card"><h3>Trust it</h3><ul><li>259 unit, 320 API and 51 browser tests pass</li><li>Automated axe checks clean in every state tested</li><li>Nothing leaves the host: no CDN, no analytics</li></ul></div>
+    <div class="card"><h3>One tag</h3><ul><li>One script, 37 KB gzipped, no framework</li><li>Isolated, so the host's styles cannot break it</li></ul></div>
+    <div class="card"><h3>No server needed</h3><ul><li>Plain files on any web host, like this demo</li><li>Or a REST API with an OpenAPI file</li></ul></div>
+    <div class="card"><h3>Standards</h3><ul><li>Progress and complete events for the platform</li><li>Certificates as signed Open Badges</li><li>One <code>docker compose up</code></li></ul></div>
   </div>
   <pre>&lt;lehulum-player lesson="lesson-001" api="..." lang="en"&gt;&lt;/lehulum-player&gt;</pre>
 </section>
 
-<section class="slide" aria-label="Slide 7 of 7" hidden>
+<section class="slide" aria-label="Slide 8 of 9" hidden>
+  <h2>Tested, private, honest about people</h2>
+  <div class="grid">
+    <div class="card"><h3>Automated</h3><ul><li>259 unit, 320 API and 51 browser tests pass</li><li>axe accessibility checks clean in every state we test</li></ul></div>
+    <div class="card"><h3>Private</h3><ul><li>No outside requests: no CDN, no analytics</li><li>No personal data on a certificate</li></ul></div>
+    <div class="card"><h3>With a person</h3><ul><li>One NVDA and Chrome run found a real problem: the slider read the clock every second</li><li>Fixed, then re-tested</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" aria-label="Slide 9 of 9" hidden>
   <h2>Honesty and the ask</h2>
   <div class="grid">
-    <div class="card"><h3>Done and tested</h3><ul><li>NVDA + Chrome run by one person: one problem found (the slider read the clock every second), fixed and re-tested</li></ul></div>
-    <div class="card"><h3>Still draft</h3><ul><li>All Amharic text</li><li>The sign-language clips are placeholders</li><li>Not yet tried on TalkBack or a real phone</li></ul></div>
+    <div class="card"><h3>Still draft</h3><ul><li>All Amharic text</li><li>The sign-language clips are placeholders</li></ul></div>
+    <div class="card"><h3>Not yet tested</h3><ul><li>TalkBack and a real phone</li><li>A co-designer doing the main task</li></ul></div>
     <div class="card"><h3>Not built</h3><ul><li>LTI 1.3 (explained in the README)</li><li>Recorded live-session viewer</li></ul></div>
   </div>
   <p><strong>We need:</strong> a real interpreter, native Amharic reviewers, and learners to test with.</p>
+  <p><strong>Admin login: none.</strong> The learner flow needs no username or password.</p>
   <p class="sub" lang="am">አመሰግናለሁ።</p>
   <p>Thank you. Questions.</p>
 </section>
