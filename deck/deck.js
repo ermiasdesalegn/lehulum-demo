@@ -5,6 +5,10 @@
   var prev = document.getElementById('prev');
   var next = document.getElementById('next');
   var index = 0;
+  slides.forEach(function (s, k) {
+    var st = s.querySelector('.stage');
+    if (st) { st.setAttribute('data-n', (k + 1) + ' / ' + slides.length); }
+  });
 
   function fromHash() {
     var n = parseInt((location.hash || '').replace('#', ''), 10);
