@@ -19,6 +19,8 @@
     });
     var h = slides[index].querySelector('h1, h2');
     counter.textContent = 'Slide ' + (index + 1) + ' of ' + slides.length + ': ' + (h ? h.textContent : '');
+    var bar = document.getElementById('bar');
+    if (bar) { bar.max = slides.length; bar.value = index + 1; }
     prev.disabled = index === 0;
     next.disabled = index === slides.length - 1;
     try { history.replaceState(null, '', '#' + (index + 1)); } catch (e) { /* file: pages may refuse */ }
