@@ -1,0 +1,74 @@
+WEBVTT
+Language: en
+
+seg-001
+00:00:00.000 --> 00:00:03.880
+Welcome to this short sample lesson.
+
+seg-002
+00:00:04.229 --> 00:00:08.209
+Today you will learn what a variable is
+in Python.
+
+seg-003
+00:00:08.559 --> 00:00:11.680
+A variable is a name that holds a value.
+
+seg-004
+00:00:12.030 --> 00:00:15.270
+Think of it as a labelled box.
+
+seg-005
+00:00:15.620 --> 00:00:20.509
+First write the name,
+then an equals sign, then the value.
+
+seg-006
+00:00:20.860 --> 00:00:23.470
+For example, name equals Abebe.
+
+seg-007
+00:00:23.820 --> 00:00:27.750
+Now the box called name
+holds the word Abebe.
+
+seg-008
+00:00:28.100 --> 00:00:32.150
+You can change what is inside at any time.
+
+seg-009
+00:00:32.500 --> 00:00:36.530
+Write age equals twenty,
+then age equals twenty-one.
+
+seg-010
+00:00:36.880 --> 00:00:39.880
+The box keeps only the newest value.
+
+seg-011
+00:00:40.230 --> 00:00:43.950
+To see what is inside,
+use the print command.
+
+seg-012
+00:00:44.300 --> 00:00:48.640
+Printing name shows Abebe on the screen.
+
+seg-013
+00:00:48.990 --> 00:00:52.490
+Good names make code easier to read.
+
+seg-014
+00:00:52.840 --> 00:00:58.000
+Use clear words like price or total,
+not single letters.
+
+seg-015
+00:00:58.350 --> 00:01:04.030
+Let us practise. Create a variable called
+city, give it your city, and print it.
+
+seg-016
+00:01:04.379 --> 00:01:07.899
+Well done. You have written
+your first variable.

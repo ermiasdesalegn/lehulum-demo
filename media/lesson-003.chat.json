@@ -1,0 +1,114 @@
+[
+  {
+    "id": "msg-001",
+    "t_ms": 2000,
+    "author": "Host",
+    "role": "host",
+    "lang": "am",
+    "text": "እንኳን ደህና መጡ! ዛሬ ስለ ተለዋዋጭ እንማራለን።"
+  },
+  {
+    "id": "msg-002",
+    "t_ms": 5000,
+    "author": "Learner 1",
+    "role": "learner",
+    "lang": "am",
+    "text": "ሰላም! ድምፁ በደንብ ይሰማል።"
+  },
+  {
+    "id": "msg-003",
+    "t_ms": 9000,
+    "author": "Learner 2",
+    "role": "learner",
+    "lang": "am",
+    "text": "ተለዋዋጭ ማለት ሳጥን ነው ማለት ነው?"
+  },
+  {
+    "id": "msg-004",
+    "t_ms": 12500,
+    "author": "Host",
+    "role": "host",
+    "lang": "am",
+    "text": "አዎ፣ ዋጋን የሚይዝ ስም ያለው ሳጥን ነው።"
+  },
+  {
+    "id": "msg-005",
+    "t_ms": 17000,
+    "author": "Learner 3",
+    "role": "learner",
+    "lang": "en",
+    "text": "Can I use my own name instead of Abebe?"
+  },
+  {
+    "id": "msg-006",
+    "t_ms": 20500,
+    "author": "Host",
+    "role": "host",
+    "lang": "en",
+    "text": "Yes. Any clear name works, for example city or price."
+  },
+  {
+    "id": "msg-007",
+    "t_ms": 28000,
+    "author": "Learner 2",
+    "role": "learner",
+    "lang": "am",
+    "text": "እድሜ ሲቀየር የድሮው ዋጋ ይጠፋል?"
+  },
+  {
+    "id": "msg-008",
+    "t_ms": 31000,
+    "author": "Host",
+    "role": "host",
+    "lang": "am",
+    "text": "አዎ፣ ሳጥኑ አዲሱን ዋጋ ብቻ ይይዛል።"
+  },
+  {
+    "id": "msg-009",
+    "t_ms": 38000,
+    "author": "Learner 3",
+    "role": "learner",
+    "lang": "am",
+    "text": "print ሲጻፍ ውጤቱ የት ይታያል?"
+  },
+  {
+    "id": "msg-010",
+    "t_ms": 42000,
+    "author": "Host",
+    "role": "host",
+    "lang": "am",
+    "text": "ማያ ገጹ ላይ ይታያል።"
+  },
+  {
+    "id": "msg-011",
+    "t_ms": 49000,
+    "author": "Learner 1",
+    "role": "learner",
+    "lang": "en",
+    "text": "price and total are good names, right?"
+  },
+  {
+    "id": "msg-012",
+    "t_ms": 57000,
+    "author": "Host",
+    "role": "host",
+    "lang": "am",
+    "text": "እስቲ ሁላችሁም ከተማ የሚባል ተለዋዋጭ ይፍጠሩ።"
+  },
+  {
+    "id": "msg-013",
+    "t_ms": 63000,
+    "author": "Learner 2",
+    "role": "learner",
+    "lang": "am",
+    "text": "ጨርሻለሁ! ከተማዬን አትሜያለሁ።"
+  },
+  {
+    "id": "msg-014",
+    "t_ms": 66000,
+    "author": "Host",
+    "role": "host",
+    "lang": "am",
+    "text": "በጣም ጥሩ! የመጀመሪያ ተለዋዋጭ ጽፋችኋል።"
+  }
+]

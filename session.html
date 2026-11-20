@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recorded session viewer (sample)</title>
+</head>
+<body>
+<main>
+<h1>Recorded session viewer (sample)</h1>
+<p>A recorded live session with captions and its chat log. The chat is invented for this demo: there are no real participants. Open "Chat log" under the video, search it, and press a message to jump the video to that moment.</p>
+<db-player src="media/lesson-003-720p.mp4"
+           captions="am:media/lesson-003.am.vtt,en:media/lesson-003.en.vtt"
+           sign="media/lesson-003-sign.mp4"
+           chat="media/lesson-003.chat.json"
+           lang="am" data-title="Recorded session (sample)">
+  <track kind="chapters" srclang="am" src="media/lesson-003.chapters.am.vtt">
+  <track kind="chapters" srclang="en" src="media/lesson-003.chapters.en.vtt">
+  <a href="media/lesson-003-720p.mp4">Download the session video</a>
+</db-player>
+</main>
+<script src="lehulum.js" defer></script>
+</body>
+</html>
