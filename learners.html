@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try it as a learner | Lehulum</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1a1a1a; --muted: #4a4a4a; --line: #767676; --brand: #b3261e; --on-bg: #1a1a1a; --on-fg: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #101318; --fg: #f2f2f2; --muted: #c8c8c8; --line: #8a8a8a; --brand: #ff8a80; --on-bg: #f2f2f2; --on-fg: #101318; }
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 100%; }
+  html.big-text { font-size: 137.5%; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 1rem/1.5 system-ui, "Noto Sans Ethiopic", "Nyala", sans-serif; }
+  main { max-width: 72rem; margin: 0 auto; padding: 1rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0.5rem 0; }
+  p { margin: 0.5rem 0; max-width: 60rem; }
+  .note { color: var(--muted); }
+  .presets { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.75rem; margin: 1rem 0 0.5rem; padding: 0; list-style: none; }
+  .presets button { width: 100%; min-height: 44px; text-align: start; padding: 0.75rem 1rem; border: 2px solid var(--line); border-radius: 0.75rem; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+  .presets button strong { display: block; font-size: 1.125rem; }
+  .presets button span { display: block; color: var(--muted); font-size: 0.9375rem; }
+  .presets button[aria-pressed="true"] { background: var(--on-bg); color: var(--on-fg); border-color: var(--on-bg); }
+  .presets button[aria-pressed="true"] span { color: inherit; }
+  .presets button:hover { border-color: var(--fg); }
+  button:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+  .reset { min-height: 44px; padding: 0.5rem 1rem; border: 2px solid var(--line); border-radius: 999px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+  #status { min-height: 1.5em; font-weight: 600; margin: 0.75rem 0; }
+  #limit { border-inline-start: 4px solid var(--brand); padding: 0.25rem 0.75rem; }
+  #limit:empty { display: none; }
+  .stage { margin-top: 1rem; }
+  /* "screen off": a black cover for the blind-learner demo. It does not hide anything from a screen reader. */
+  #curtain { position: fixed; inset: 0; z-index: 2147483000; background: #000; display: flex; align-items: flex-end; justify-content: center; padding: 1rem; pointer-events: none; }
+  #curtain[hidden] { display: none; }
+  #curtain button { pointer-events: auto; min-height: 44px; padding: 0.5rem 1rem; border: 2px solid #8a8a8a; border-radius: 999px; background: #000; color: #d0d0d0; font: inherit; cursor: pointer; }
+  #curtain button:focus-visible { outline: 3px solid #fff; }
+</style>
+</head>
+<body>
+<main>
+<h1>Try it as a learner</h1>
+<p>One lesson, four learners. Each button sets up the same player the way that learner would use it, using settings any learner can choose in the player. Press a button, then play the lesson.</p>
+<p class="note">Honest notes: the sign-language window shows a labelled placeholder clip, not sign language. These setups have not yet been tried by a blind, Deaf or low-vision learner. The setups are saved in this browser until you press "Back to normal".</p>
+
+<ul class="presets" aria-label="Learner setups">
+  <li><button type="button" data-preset="deaf" aria-pressed="false"><strong>Deaf learner</strong><span>Sound off, large Amharic captions, sign window on</span></button></li>
+  <li><button type="button" data-preset="blind" aria-pressed="false"><strong>Blind learner</strong><span>Screen off, sound on, audio description on</span></button></li>
+  <li><button type="button" data-preset="lowdata" aria-pressed="false"><strong>Low data (3G)</strong><span>Video waits until asked, text first</span></button></li>
+  <li><button type="button" data-preset="lowvision" aria-pressed="false"><strong>Low vision</strong><span>High contrast, largest captions, larger text</span></button></li>
+</ul>
+<button type="button" class="reset" id="reset">Back to normal</button>
+
+<p id="status" role="status" aria-live="polite"></p>
+<p id="limit" class="note"></p>
+
+<section class="stage" aria-label="Lesson">
+  <h2>Lesson 1: your first Python variable</h2>
+  <div id="slot"></div>
+</section>
+</main>
+
+<div id="curtain" hidden aria-hidden="true">
+  <button type="button" id="curtain-off" tabindex="-1">Screen is off for the demo. Turn it back on (Escape)</button>
+</div>
+
+<template id="player-tpl">
+  <db-player src="media/lesson-001-720p.mp4"
+             captions="am:media/lesson-001.am.vtt,en:media/lesson-001.en.vtt"
+             describe="am:media/lesson-001.descriptions.am.vtt,en:media/lesson-001.descriptions.en.vtt"
+             sign="media/lesson-001-sign-placeholder.mp4"
+             lang="en" data-title="Your first Python variable">
+    <track kind="chapters" srclang="am" src="media/lesson-001.chapters.am.vtt">
+    <track kind="chapters" srclang="en" src="media/lesson-001.chapters.en.vtt">
+    <a href="media/lesson-001-720p.mp4">Download the lesson video</a>
+  </db-player>
+</template>
+
+<script>
+(function () {
+  "use strict";
+  var SETTINGS = "lehulum.player.settings", SIGN = "lehulum.player.sign", SAVED = "lehulum.learners.original";
+  var BASE = { size: 0, scheme: "default", theme: "dark", descriptions: true, volume: 40, speed: 1, shortcuts: true };
+  var SIGN_BASE = { on: true, mode: "floating", size: 0, pos: { x: 1, y: 1 } };
+
+  function get(store, k) { try { return store.getItem(k); } catch (e) { return null; } }
+  function put(store, k, v) { try { if (v === null) store.removeItem(k); else store.setItem(k, v); } catch (e) { /* blocked storage */ } }
+  function merge(a, b) { var o = {}, k; for (k in a) o[k] = a[k]; for (k in b) o[k] = b[k]; return o; }
+
+  var PRESETS = {
+    deaf: {
+      name: "Deaf learner", lang: "am",
+      settings: { volume: 0, size: 2, scheme: "yellow", descriptions: false },
+      sign: { on: true, mode: "floating", size: 1 },
+      said: "Deaf learner: sound off, Amharic captions at the largest size in yellow on black, sign window on.",
+      limit: "The sign window shows a placeholder clip, not sign language. A real lesson needs a qualified interpreter."
+    },
+    blind: {
+      name: "Blind learner", lang: "en", curtain: true,
+      settings: { volume: 80, descriptions: true },
+      sign: { on: false },
+      said: "Blind learner: screen off, sound on, audio description on. Press Escape to turn the screen back on.",
+      limit: "The black screen is only for this demo. A blind learner uses a screen reader such as NVDA or TalkBack; we have not yet tested with one."
+    },
+    lowdata: {
+      name: "Low data", lang: "en", saveData: true,
+      settings: {},
+      sign: {},
+      said: "Low data: the video and sign video wait until you ask for them. The lesson text is ready to read at once.",
+      limit: "On this demo site there is no separate audio file, so it cannot play sound only, and the file sizes are not shown. In the full version with the server it plays sound only and shows each file size."
+    },
+    lowvision: {
+      name: "Low vision", lang: "en", bigText: true,
+      settings: { theme: "contrast", size: 2, scheme: "yellow" },
+      sign: {},
+      said: "Low vision: high-contrast player, largest captions, larger page text.",
+      limit: "A web page cannot zoom your browser. For 200% zoom press Control and plus."
+    }
+  };
+
+  var slot = document.getElementById("slot");
+  var tpl = document.getElementById("player-tpl");
+  var status = document.getElementById("status");
+  var limit = document.getElementById("limit");
+  var curtain = document.getElementById("curtain");
+  var curtainOff = document.getElementById("curtain-off");
+  var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-preset]"));
+
+  // Remember the learner's own settings once, so "Back to normal" can put them back.
+  if (get(sessionStorage, SAVED) === null) {
+    put(sessionStorage, SAVED, JSON.stringify({ settings: get(localStorage, SETTINGS), sign: get(localStorage, SIGN) }));
+  }
+  function original() {
+    try { return JSON.parse(get(sessionStorage, SAVED)) || { settings: null, sign: null }; } catch (e) { return { settings: null, sign: null }; }
+  }
+
+  function mount(p) {
+    slot.replaceChildren();
+    var el = tpl.content.firstElementChild.cloneNode(true);
+    if (p) {
+      el.setAttribute("lang", p.lang);
+      if (p.saveData) el.setAttribute("data-save-data", "on");
+    }
+    slot.appendChild(el);
+  }
+
+  function setCurtain(on) {
+    curtain.hidden = !on;
+    curtainOff.tabIndex = on ? 0 : -1;
+  }
+
+  function apply(id) {
+    var p = PRESETS[id];
+    var o = original(), own, ownSign;
+    try { own = o.settings ? JSON.parse(o.settings) : {}; } catch (e) { own = {}; }
+    try { ownSign = o.sign ? JSON.parse(o.sign) : {}; } catch (e) { ownSign = {}; }
+    // each setup starts from the player defaults; only the learner's own speed and sign-window position are kept
+    put(localStorage, SETTINGS, JSON.stringify(merge(merge(BASE, { speed: own.speed || 1 }), p.settings)));
+    put(localStorage, SIGN, JSON.stringify(merge(merge(SIGN_BASE, { pos: ownSign.pos || SIGN_BASE.pos }), p.sign)));
+    document.documentElement.classList.toggle("big-text", !!p.bigText);
+    buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-preset") === id)); });
+    mount(p);
+    setCurtain(!!p.curtain);
+    status.textContent = p.said;
+    limit.textContent = p.limit;
+  }
+
+  function reset() {
+    var o = original();
+    put(localStorage, SETTINGS, o.settings);
+    put(localStorage, SIGN, o.sign);
+    document.documentElement.classList.remove("big-text");
+    buttons.forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
+    mount(null);
+    setCurtain(false);
+    status.textContent = "Back to normal: your own player settings are restored.";
+    limit.textContent = "";
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () { apply(b.getAttribute("data-preset")); });
+  });
+  document.getElementById("reset").addEventListener("click", reset);
+  curtainOff.addEventListener("click", function () { setCurtain(false); status.textContent = "Screen back on. The blind-learner setup is still active."; });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !curtain.hidden) { setCurtain(false); status.textContent = "Screen back on. The blind-learner setup is still active."; }
+  });
+
+  mount(null);
+})();
+</script>
+<script src="lehulum.js" defer></script>
+</body>
+</html>
